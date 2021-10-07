@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+#cards {
+    width: 1000px;
+    height: 800px;
+    margin: 50px auto;
+    border: 2px solid black;
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: url(../images/background_cinema.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    border: 2px solid black;
+
+    background-color: seashell;
+
+
+    height: 675px;
+    width: 300px;
+}
+
+.poster {
+    height: 420px;
+    width: 280px;
+    margin-top: 10px;
+}
+
+.poster img:nth-child(2) {
+    position: relative;
+    top: -109px;
+    left: 9px;
+}
+
+.poster img:nth-child(3) {
+    position: relative;
+    top: -120px;
+    left: 69px;
+}
+
+.title {
+    width: 280px;
+    height: 75px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+
+    font-size: 30px;
+    font-weight: 400;
+    color: #616161;
+    line-height: 1;
+}
+
+.price {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+    width: 280px;
+    height: 45px;
+}
+
+.price > div {
+    display: flex;
+    align-items: center;
+}
+
+.price > div:nth-child(1) {
+    color: #242323;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.price > div:nth-child(2) {
+    color: #868282;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+align-items: center;
+    width: 280px;
+    height: 40px;
+}
+.material-icons {
+    color: gold;
+    font-size: 1.8em;
+}
+
+.buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 280px;
+}
+#btn {
+    color: red;
+    background-color: rgb(249, 251, 252);
+
+    border-radius: 5px;
+
+    height: 50px;
+    width: 200px;
+
+    margin: auto;
+}
