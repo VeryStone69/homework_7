@@ -10,7 +10,7 @@ let myCard = [
     currency: "руб.",
     rating: .5,
     buy: "buy.png",
-    action: true,
+    action: false,
     fullPrice: function() {
         return x = this.price + ",00  " + this.currency;
     },
