@@ -28,7 +28,7 @@ let myCard = [
     currency: "руб.",
     rating: 4.5,
     buy: "buy.png",
-    action: false,
+    action: true,
     fullPrice: function() {
         return x = this.price + ",00  " + this.currency;
     },
@@ -46,7 +46,7 @@ let myCard = [
     currency: "руб.",
     rating: 4.5,
     buy: "buy.png",
-    action: false,
+    action: true,
     fullPrice: function() {
         return x = this.price + ",00  " + this.currency;
     },
@@ -59,7 +59,17 @@ let myCard = [
 
 function cinema() {
 
-    let rank = "";
+    
+
+    let s = ``;
+    for (i = 0; i < myCard.length; i++) {
+        let sp = '';
+        let sl = `0`;
+        if (myCard[i].action)
+        {sp = `<div>${myCard[i].salePrice()}</div>`;
+        sl = 1;}
+        
+        let rank = "";
     if (myCard.rating >= 0) {
             switch(myCard[j].rating) {
             case 0: rank = `star_border star_border star_border star_border star_border`; break;
@@ -75,14 +85,6 @@ function cinema() {
             case  5: rank = `star star star star star`; break;
             }
         } else {star = `star_border star_border star_border star_border star_border`}
-
-    let s = ``;
-    for (i = 0; i < myCard.length; i++) {
-        let sp = '';
-        let sl = `0`;
-        if (myCard[i].action)
-        {sp = `<div>${myCard[i].salePrice()}</div>`;
-        sl = 1;}
 
         s += `<div class="card">
                     <div class="poster">
