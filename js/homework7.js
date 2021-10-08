@@ -10,7 +10,7 @@ let myCard = [
     currency: "руб.",
     rating: .5,
     buy: "buy.png",
-    action: false,
+    action: true,
     fullPrice: function() {
         return x = this.price + ",00  " + this.currency;
     },
@@ -28,7 +28,7 @@ let myCard = [
     currency: "руб.",
     rating: 4.5,
     buy: "buy.png",
-    action: true,
+    action: false,
     fullPrice: function() {
         return x = this.price + ",00  " + this.currency;
     },
@@ -46,7 +46,7 @@ let myCard = [
     currency: "руб.",
     rating: 4.5,
     buy: "buy.png",
-    action: true,
+    action: false,
     fullPrice: function() {
         return x = this.price + ",00  " + this.currency;
     },
@@ -59,7 +59,7 @@ let myCard = [
 
 function cinema() {
 
-    
+
 
     let s = ``;
     for (i = 0; i < myCard.length; i++) {
@@ -68,23 +68,23 @@ function cinema() {
         if (myCard[i].action)
         {sp = `<div>${myCard[i].salePrice()}</div>`;
         sl = 1;}
-        
+
         let rank = "";
-    if (myCard.rating >= 0) {
-            switch(myCard[j].rating) {
-            case 0: rank = `star_border star_border star_border star_border star_border`; break;
-            case 0.5: rank = `star_half star_border star_border star_border star_border`; break;
-            case 1: rank = `star star_border star_border star_border star_border`; break;
-            case 1.5: rank = `star star_half star_border star_border star_border`; break;
-            case 2: rank = `star star star_border star_border star_border`; break;
-            case 2.5: rank = `star star star_half star_border star_border`; break;
-            case 3: rank = `star star star star_border star_border`; break;
-            case 3.5: rank = `star star star star_half star_border`; break;
-            case 4: rank = `star star star star star_border`; break;
-            case 4.5: rank = `star star star star star_half`; break;
-            case  5: rank = `star star star star star`; break;
-            }
-        } else {star = `star_border star_border star_border star_border star_border`}
+            if (myCard[i].rating >= 0) {
+                    switch(myCard[i].rating) {
+                    case 0: rank = `star_border star_border star_border star_border star_border`; break;
+                    case 0.5: rank = `star_half star_border star_border star_border star_border`; break;
+                    case 1: rank = `star star_border star_border star_border star_border`; break;
+                    case 1.5: rank = `star star_half star_border star_border star_border`; break;
+                    case 2: rank = `star star star_border star_border star_border`; break;
+                    case 2.5: rank = `star star star_half star_border star_border`; break;
+                    case 3: rank = `star star star star_border star_border`; break;
+                    case 3.5: rank = `star star star star_half star_border`; break;
+                    case 4: rank = `star star star star star_border`; break;
+                    case 4.5: rank = `star star star star star_half`; break;
+                    case  5: rank = `star star star star star`; break;
+                    }
+                } else {star = `star_border star_border star_border star_border star_border`}
 
         s += `<div class="card">
                     <div class="poster">
@@ -102,9 +102,7 @@ function cinema() {
                         <div>${myCard[i].fullPrice()}</div>
                     </div>
                     <div class="rating">
-                        <span class="material-icons">
-                        ${rank}
-                            </span>
+                        <span class="material-icons">${rank}</span>
                     </div>
                     <div class="buy"><img src="images/${myCard[i].buy}" alt=""></div>
             </div>`;
@@ -112,4 +110,5 @@ function cinema() {
     };
     cards.innerHTML = s;
 }
+
 
